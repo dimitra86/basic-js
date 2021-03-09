@@ -8,6 +8,6 @@ module.exports = function calculateHanoi(disksNumber, turnsSpeed) {
   let answer = {     // объект
     turns: numTransfers,  
     seconds: timeTransfers        
-
+  }
   return answer;
 };
