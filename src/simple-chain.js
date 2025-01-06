@@ -9,14 +9,15 @@ const chainMaker = {
   getLength() {
     // throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
+    return this.currChain.length;
+  },
+  addLink(value) {
+    // throw new NotImplementedError('Not implemented');
+    // remove line with error and write your code here
     this.currChain.push(`( ${value} )`);
     return this;
   },
-  addLink(/* value */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
-  },
-  removeLink(/* position */) {
+  removeLink(position) {
     // throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
     if (this._checkIntegerNumber(position)) {
@@ -29,7 +30,8 @@ const chainMaker = {
       return this;
   }
   this._deleteChain();
-  throw new Error('Position must be integer number!');
+  // throw new Error('Position must be integer number!');
+  this.currChain.length = 0;
   },
   reverseChain() {
     // throw new NotImplementedError('Not implemented');
