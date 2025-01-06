@@ -12,8 +12,9 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 function getSeason(date) {
-  // throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+  if (!(date instanceof Date) || isNaN(date)) {
+    throw new Error("Invalid date!");
+}
   let month=date.getMonth();
   if(month===1 || month===11 || month===0){
     return "winter";
